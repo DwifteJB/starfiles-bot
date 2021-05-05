@@ -1,0 +1,9 @@
+{
+  "prefix": "s!",
+  "token": "",
+  "git": {
+    "username": "",
+    "pass": ""
+  },
+  "changelog": "- Added s!shell (Owner only)"
+}

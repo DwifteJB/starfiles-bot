@@ -86,7 +86,7 @@ class listing_cog(commands.Cog):
                 except:
                     pass
                 print(f"Downloading {package_name}")
-                req = requests.get(f"https://api.starfiles.co/direct/{arg1}")
+                req = requests.get(f"https://api.starfiles.co/direct/{package_id}")
                 with open(f"{os.getcwd()}/data/{package_name}", "wb") as f:
                     f.write(req.content)
                 #opener = urllib.request.build_opener()

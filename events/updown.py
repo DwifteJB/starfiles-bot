@@ -37,8 +37,11 @@ class upload_cog(commands.Cog):
             attachment = ctx.message.attachments[0]
             print(attachment.url)
             await attachment.save(attachment.filename)
-            shutil.rmtree(f"{os.getcwd()}/data/")
-            os.mkdir(f"{os.getcwd()}/data/")
+            try:
+                shutil.rmtree(f"{os.getcwd()}/data/")
+                os.mkdir(f"{os.getcwd()}/data/")
+            except:
+                os.mkdir(f"{os.getcwd()}/data/")
             shutil.move(f"{os.getcwd()}/{attachment.filename}", f"{os.getcwd()}/data/{attachment.filename}")
 
             files1 = {
